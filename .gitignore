@@ -1,5 +1,5 @@
 # Local Settings
-.env_example
+.env
 env/
 ENV/
 env.bak/

@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    load_dotenv()  # Load .env_example
+    load_dotenv()  # Load .env
     model_config = SettingsConfigDict(case_sensitive=True)  # Model Config
 
     # Bot
