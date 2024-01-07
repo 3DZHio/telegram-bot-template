@@ -1,0 +1,6 @@
+aiogram
+asyncio
+loguru
+psycopg[binary,pool]
+pydantic-settings
+python-dotenv
