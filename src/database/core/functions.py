@@ -1,6 +1,6 @@
 from psycopg.rows import dict_row
 
-from src.database.connection import pool
+from src.database.core.connection import pool
 
 
 async def transaction(query: str, params: tuple) -> None:

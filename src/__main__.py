@@ -8,7 +8,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from src.bot.handlers import get_routers
 from src.bot.utils import setup_logger, set_commands
 from src.config import settings
-from src.database.connection import pool
+from src.database.core.connection import pool
 
 
 def setup_filters(dp: Dispatcher) -> None:

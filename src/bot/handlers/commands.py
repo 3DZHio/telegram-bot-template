@@ -2,7 +2,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 from src.bot.routers import start_router
-from src.database import users
+from src.database.models import users
 
 
 @start_router.message(CommandStart())
