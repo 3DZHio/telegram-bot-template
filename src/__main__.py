@@ -1,3 +1,6 @@
+from asyncio import run
+from contextlib import suppress
+
 from aiogram import Bot, Dispatcher
 from aiogram import F
 from aiogram.fsm.storage.memory import MemoryStorage
@@ -47,6 +50,5 @@ async def main() -> None:
 
 
 if __name__ == '__main__':  # Entry Point
-    from asyncio import run
-
-    run(main())  # Launch Code
+    with suppress(KeyboardInterrupt, SystemExit):  # Suppress KeyboardInterrupt and SystemExit Exceptions
+        run(main())  # Launch Code
