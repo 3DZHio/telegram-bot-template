@@ -1,5 +1,6 @@
 aiogram
 asyncio
+cachetools
 loguru
 psycopg[binary,pool]
 pydantic-settings

@@ -1,4 +1,4 @@
-from src.bot.loader import bot, dp
+from src.bot.utils.loader import bot, dp
 from src.database.connection import pool
 
 
@@ -18,7 +18,9 @@ def setup_handlers() -> None:
 
 def setup_middlewares() -> None:
     """MIDDLEWARES"""
-    dp.message.middleware()
+    from src.bot.middlewares.throttling import ThrottlingMiddleware
+
+    dp.message.middleware(ThrottlingMiddleware)
 
 
 @dp.startup()
