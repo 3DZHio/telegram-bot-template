@@ -11,11 +11,9 @@ def setup_filters() -> None:
 
 def setup_handlers() -> None:
     """HANDLERS"""
-    from src.bot.handlers import commands
+    from src.bot.handlers import get_routers
 
-    dp.include_routers(
-        commands.start,
-    )  # Register Routers
+    dp.include_routers(*get_routers())  # Register Routers
 
 
 def setup_middlewares() -> None:
