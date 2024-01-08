@@ -7,7 +7,7 @@
 ### Clone Repository
 
 ```shell
-  git clone https://github.com/3DZHio/telegram_bot_template.git
+  git clone https://github.com/3DZHio/telegram-bot-template.git
   ```
 
 ### Create Virtual Environment and Install Packages
