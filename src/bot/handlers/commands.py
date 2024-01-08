@@ -4,7 +4,7 @@ from aiogram.types import Message
 
 from src.database import users
 
-start = Router()
+start = Router(name="start-router")
 
 
 @start.message(CommandStart())
