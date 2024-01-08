@@ -2,27 +2,27 @@
 
 # Telegram Bot Template
 
-## Setup
+## 📦 Setup
 
-### Clone Repository
+### 🔗 Clone Repository
 
 ```shell
   git clone https://github.com/3DZHio/telegram-bot-template.git
   ```
 
-### Create Virtual Environment and Install Packages
+### 📌 Create Virtual Environment and Install Packages
 
 ```shell
   cd telegram-bot-template & python -m venv venv && venv\Scripts\activate && pip install -r requirements.txt && rename .env_example .env
   ```
 
-### Define Variables in `.env`
+### 📝 Define Variables in `.env`
 
 > [BOT_TOKEN](https://core.telegram.org/bots#how-do-i-create-a-bot)
 
 > [DATABASE](https://www.datacamp.com/tutorial/beginners-introduction-postgresql)
 
-### Run Code
+### 🚀 Run Code
 
 ```shell
   python -m src
