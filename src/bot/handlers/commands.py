@@ -11,8 +11,6 @@ start = Router(name="start-router")
 async def cmd_start(message: Message) -> None:
     uid = message.chat.id
     await message.delete()
-    if await users.exists(uid):
-        await message.answer(text="first_intro")
-    else:
+    if not (await users.exists(uid)):
         await users.add(uid)
-        await message.answer(text="second_intro")
+    await message.answer(text="Start")
