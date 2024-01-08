@@ -1,4 +1,4 @@
-from src.bot.utils.loader import bot, dp
+from src.bot.loader import bot, dp
 from src.database.connection import pool
 
 
