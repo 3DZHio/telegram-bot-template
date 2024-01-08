@@ -21,12 +21,14 @@ pool = AsyncConnectionPool(conninfo=DSN, open=False)
 
 
 async def transaction(query: str, args: tuple) -> None:
+    """Transaction"""
     async with pool.connection() as conn:
         async with conn.transaction():
             await conn.execute(query, args)
 
 
 async def fetchall(query: str, args: tuple) -> dict:
+    """FetchAll"""
     async with pool.connection() as conn:
         async with conn.cursor(row_factory=dict_row) as cursor:
             await cursor.execute(query, args)
