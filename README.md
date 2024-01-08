@@ -1,6 +1,6 @@
 [//]: # ([<img src="https://img.shields.io/badge/Telegram-%40Bot-green">]&#40;https://t.me/Bot&#41;)
 
-# Telegram Bot
+# Telegram Bot Template
 
 ## Setup
 
