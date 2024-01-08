@@ -1,13 +1,11 @@
-from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
+from src.bot.routers import start_router
 from src.database import users
 
-start = Router(name="start-router")
 
-
-@start.message(CommandStart())
+@start_router.message(CommandStart())
 async def cmd_start(message: Message) -> None:
     uid = message.chat.id
     await message.delete()
