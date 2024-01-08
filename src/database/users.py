@@ -1,4 +1,4 @@
-from src.database.connection import fetchall, transaction
+from src.database.functions import fetchall, transaction
 
 
 async def exists(uid: int) -> bool:
