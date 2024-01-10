@@ -9,10 +9,10 @@
 ### 📌 Create Virtual Environment and Install Packages
 
 ```shell
-  cd telegram-bot-template & ^
-  python -m venv venv && ^
-  venv\Scripts\activate && ^
-  pip install -r requirements.txt && ^
+  cd telegram-bot-template & \
+  python -m venv venv && \
+  venv\Scripts\activate && \
+  pip install -r requirements.txt && \
   rename .env_example .env
   ```
 
