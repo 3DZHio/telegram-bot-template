@@ -1,6 +1,5 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-# Start Menu
 menu = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text="1")],
 
@@ -9,3 +8,7 @@ menu = ReplyKeyboardMarkup(keyboard=[
 
     [KeyboardButton(text="4")]
 ], resize_keyboard=True, input_field_placeholder="Выберите Что-Нибудь из Меню")
+
+# 1
+# 2 3
+# 4

@@ -1,11 +1,14 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-#
-profile = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="1", callback_data='1')],
+menu = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="a", callback_data='a')],
 
-    [InlineKeyboardButton(text="2", callback_data='2'),
-     InlineKeyboardButton(text="3", callback_data='3')],
+    [InlineKeyboardButton(text="b", callback_data='b'),
+     InlineKeyboardButton(text="c", callback_data='c')],
 
-    [InlineKeyboardButton(text="4", callback_data='4')]
+    [InlineKeyboardButton(text="d", callback_data='d')]
 ], row_width=1)
+
+# a
+# b c
+# d

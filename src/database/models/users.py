@@ -1,9 +1,9 @@
-from src.database.core.functions import fetchall, transaction
+from src.database.core.functions import transaction, fetchone, fetchall
 
 
 async def exists(uid: int) -> bool:
     """Проверить на Существование"""
-    return bool(await fetchall("SELECT true FROM users WHERE uid = %s;",
+    return bool(await fetchone("SELECT true FROM users WHERE uid = %s;",
                                (uid,)))
 
 
@@ -15,5 +15,5 @@ async def add(uid: int) -> None:
 
 async def info(uid: int) -> dict:
     """Информация"""
-    return await fetchall("SELECT * FROM users WHERE uid = %s;",
+    return await fetchone("SELECT * FROM users WHERE uid = %s;",
                           (uid,))
