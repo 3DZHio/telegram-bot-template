@@ -13,7 +13,7 @@
   python -m venv venv && \
   venv\Scripts\activate && \
   pip install -r requirements.txt && \
-  rename .env_example .env
+  rename .env.dist .env
   ```
 
 ### 📝 Define Variables in `.env`
