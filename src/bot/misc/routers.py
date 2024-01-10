@@ -1,11 +1,14 @@
 from aiogram import Router
 
-commands_router = Router(name="commands")
+# CallBacks
 
-start_router = Router(name="start")
 
-help_router = Router(name="help")
+# Commands
+start_router = Router()
+help_router = Router()
+settings_router = Router()
 
-settings_router = Router(name="settings")
+# Errors
 
-callbacks_router = Router(name="callbacks")
+
+# Inline Mode
