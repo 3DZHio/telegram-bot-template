@@ -8,7 +8,3 @@ menu = ReplyKeyboardMarkup(keyboard=[
 
     [KeyboardButton(text="4")]
 ], resize_keyboard=True, input_field_placeholder="Выберите Что-Нибудь из Меню")
-
-# 1
-# 2 3
-# 4

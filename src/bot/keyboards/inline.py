@@ -8,7 +8,3 @@ menu = InlineKeyboardMarkup(inline_keyboard=[
 
     [InlineKeyboardButton(text="d", callback_data='d')]
 ], row_width=1)
-
-# a
-# b c
-# d
