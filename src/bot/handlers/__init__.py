@@ -10,10 +10,8 @@ def get_routers() -> list[Router]:
     ]
     # Commands
     cmd_routers = [
-        commands.router,
         commands.start_router,
-        commands.help_router,
-        commands.settings_router
+        commands.router,
     ]
     # Errors
     err_routers = [
