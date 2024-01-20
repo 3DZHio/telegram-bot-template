@@ -6,7 +6,7 @@ from aiogram import F
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from src.bot.handlers import get_routers
-from src.bot.utils import set_commands
+from src.bot.utils import set_bot_commands
 from src.config import settings
 from src.database.core.connection import pool
 from src.logs import setup_logger
@@ -39,7 +39,7 @@ async def main() -> None:
     setup_filters(dp)  # Filters
     setup_handlers(dp)  # Handlers
     setup_middlewares(dp)  # MiddleWares
-    await set_commands(bot)  # Bot Commands
+    await set_bot_commands.set_commands(bot)  # Bot Commands
 
     try:
         await pool.open()  # Open Connection Pool
