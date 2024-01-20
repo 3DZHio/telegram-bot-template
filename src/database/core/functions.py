@@ -10,7 +10,7 @@ async def transaction(query: str, params: tuple) -> None:
             await conn.execute(query, params)
 
 
-async def fetchone(query: str, params: tuple) -> dict:
+async def fetchone(query: str, params: tuple = None) -> dict:
     """FetchOne"""
     async with pool.connection() as conn:
         async with conn.cursor(row_factory=dict_row) as cursor:
@@ -18,7 +18,7 @@ async def fetchone(query: str, params: tuple) -> dict:
             return await cursor.fetchone()
 
 
-async def fetchall(query: str, params: tuple) -> dict:
+async def fetchall(query: str, params: tuple = None) -> dict:
     """FetchAll"""
     async with pool.connection() as conn:
         async with conn.cursor(row_factory=dict_row) as cursor:
