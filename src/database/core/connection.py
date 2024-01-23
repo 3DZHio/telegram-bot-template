@@ -14,6 +14,6 @@ DSN: PostgresDsn = (
     f"@{settings.HOST.get_secret_value()}"
     f":{settings.PORT.get_secret_value()}"
     f"/{settings.DATABASE.get_secret_value()}"
-)
+)  # Connection String
 
 pool = AsyncConnectionPool(conninfo=DSN, open=False)

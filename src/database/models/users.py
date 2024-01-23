@@ -2,18 +2,18 @@ from src.database.core.functions import transaction, fetchone, fetchall
 
 
 async def exists(uid: int) -> bool:
-    """Проверить на Существование"""
-    return bool(await fetchone("SELECT true FROM users WHERE uid = %s;",
+    """Check for Existence"""
+    return bool(await fetchone("SELECT 1 FROM users WHERE uid = %s LIMIT 1;",
                                (uid,)))
 
 
 async def add(uid: int) -> None:
-    """Добавить"""
+    """Add"""
     await transaction("INSERT INTO users(uid) VALUES (%s);",
                       (uid,))
 
 
 async def info(uid: int) -> dict:
-    """Информация"""
-    return await fetchone("SELECT * FROM users WHERE uid = %s;",
+    """Information"""
+    return await fetchone("SELECT * FROM users WHERE uid = %s LIMIT 1;",
                           (uid,))
