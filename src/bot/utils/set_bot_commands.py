@@ -1,7 +1,7 @@
 from aiogram import Bot
 from aiogram.types import BotCommandScopeAllPrivateChats, BotCommand
 
-from src.texts.bot import bot_commands
+from src.bot.texts.text import bot_commands
 
 
 async def set_commands(bot: Bot) -> None:
