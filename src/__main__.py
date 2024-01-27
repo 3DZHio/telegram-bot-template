@@ -15,7 +15,7 @@ from src.logs import setup_logger
 def setup_filters(dp: Dispatcher) -> None:
     """FILTERS"""
 
-    dp.message.filter(F.chat.type == "private")  # Only Private Chat Filter
+    dp.message.filter()  # Register Filters
 
 
 def setup_handlers(dp: Dispatcher) -> None:
