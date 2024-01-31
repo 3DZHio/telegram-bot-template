@@ -2,7 +2,6 @@ from asyncio import run
 from contextlib import suppress
 
 from aiogram import Bot, Dispatcher
-from aiogram import F
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from src.bot.handlers import get_routers
