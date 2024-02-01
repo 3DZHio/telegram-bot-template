@@ -1,6 +1,6 @@
 from aiogram import Router
 
-from src.bot.handlers import callbacks, commands, errors, inline_mode
+from src.bot.handlers import callbacks, messages, errors, inlines
 
 
 def get_routers() -> list[Router]:
@@ -10,8 +10,8 @@ def get_routers() -> list[Router]:
     ]
     # Commands
     cmd_routers = [
-        commands.start_router,
-        commands.router,
+        messages.start_router,
+        messages.router,
     ]
     # Errors
     err_routers = [
@@ -19,6 +19,6 @@ def get_routers() -> list[Router]:
     ]
     # Inline Mode
     inl_routers = [
-        inline_mode.router,
+        inlines.router,
     ]
     return cb_routers + cmd_routers + err_routers + inl_routers
