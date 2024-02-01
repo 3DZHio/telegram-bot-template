@@ -1,4 +1,4 @@
-from src.database.core.functions import transaction, fetchone, fetchall
+from src.database.core.functions import transaction, fetchone
 
 
 async def exists(uid: int) -> bool:
