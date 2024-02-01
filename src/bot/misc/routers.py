@@ -1,14 +1,13 @@
 from aiogram import Router
 
-# CallBacks
+# CALLBACKS
 
 
-# Commands
+# MESSAGES
 start_router = Router()
-help_router = Router()
-settings_router = Router()
 
-# Errors
+# ERRORS
 
 
-# Inline Mode
+# INLINES
+
