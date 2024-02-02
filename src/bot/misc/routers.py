@@ -4,7 +4,7 @@ from aiogram import Router
 
 
 # MESSAGES
-start_router = Router()
+start = Router()
 
 # ERRORS
 
