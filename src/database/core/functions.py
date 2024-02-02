@@ -18,7 +18,7 @@ async def fetchone(query: str, params: tuple = None) -> dict:
             return await cursor.fetchone()
 
 
-async def fetchall(query: str, params: tuple = None) -> dict:
+async def fetchall(query: str, params: tuple = None) -> list[dict]:
     """FetchAll"""
     async with pool.connection() as conn:
         async with conn.cursor(row_factory=dict_row) as cursor:
