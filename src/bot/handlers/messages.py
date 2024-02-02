@@ -7,7 +7,7 @@ from src.bot.texts import outer
 from src.database.models import users
 
 
-@routers.start.message(CommandStart(), F.text)
+@routers.msg_start.message(CommandStart(), F.text)
 async def cmd_start(message: Message) -> None:
     uid = message.chat.id
     await message.delete()

@@ -1,12 +1,12 @@
 from aiogram import Router
 
-from src.bot.handlers import callbacks, messages, errors, inlines
+from src.bot.handlers import messages, callbacks, inlines, errors
 
 
 def get_routers() -> list[Router]:
     # MESSAGES
     msg = [
-        messages.routers.start,
+        messages.routers.msg_start,
     ]
     # CALLBACKS
     cb = [
