@@ -12,12 +12,12 @@ def get_routers() -> list[Router]:
     cb = [
 
     ]
-    # ERRORS
-    err = [
-
-    ]
     # INLINES
     inl = [
+
+    ]
+    # ERRORS
+    err = [
 
     ]
     return msg + cb + inl + err
