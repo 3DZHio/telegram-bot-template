@@ -6,7 +6,7 @@ from src.bot.handlers import messages, callbacks, inlines, errors
 def get_routers() -> list[Router]:
     # MESSAGES
     msg = [
-        messages.routers.msg_start,
+        messages.routers.start_msg,
     ]
     # CALLBACKS
     cb = [

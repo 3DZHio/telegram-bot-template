@@ -8,7 +8,7 @@ from src.database.models import users
 
 
 # START
-@routers.msg_start.message(CommandStart(), F.text)
+@routers.start_msg.message(CommandStart(), F.text)
 async def cmd_start(message: Message) -> None:
     uid = message.chat.id
     await message.delete()

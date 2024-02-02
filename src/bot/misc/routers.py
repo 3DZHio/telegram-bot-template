@@ -1,7 +1,7 @@
 from aiogram import Router
 
 # MESSAGES
-msg_start = Router()
+start_msg = Router()
 
 # CALLBACKS
 
