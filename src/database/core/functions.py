@@ -23,4 +23,4 @@ async def fetchall(query: str, params: tuple = None) -> dict:
     async with pool.connection() as conn:
         async with conn.cursor(row_factory=dict_row) as cursor:
             await cursor.execute(query, params)
-            return (await cursor.fetchall())[0]
+            return await cursor.fetchall()
