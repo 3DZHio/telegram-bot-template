@@ -49,6 +49,6 @@ async def main() -> None:
         await bot.session.close()  # Close Bot Session
 
 
-if __name__ == '__main__':  # Entry Point
+if __name__ == "__main__":  # Entry Point
     with suppress(KeyboardInterrupt, SystemExit):  # Suppress KeyboardInterrupt and SystemExit Exceptions
         run(main())  # Launch Code
