@@ -14,4 +14,4 @@ async def cmd_start(message: Message) -> None:
     await message.delete()
     if not (await users.exists(uid)):
         await users.add(uid)
-    await message.answer(text=outer.start)
+    await message.answer(text=outer.msg_start)
