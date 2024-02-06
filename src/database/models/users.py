@@ -1,5 +1,5 @@
-from src.database.core.functions import fetchone, transaction, select
-from src.database.text import all_columns, any_columns, users, uid_condition
+from src.database.core.functions import fetchone, transaction, select, insert
+from src.database.text import all_columns, any_columns, inset, users, uid_condition
 
 
 async def exists(uid: int) -> bool:
@@ -10,7 +10,7 @@ async def exists(uid: int) -> bool:
 
 async def add(uid: int) -> None:
     """Add"""
-    await transaction("INSERT INTO users(uid) VALUES (%s);",
+    await transaction(insert(users, "uid", inset),
                       (uid,))
 
 
