@@ -1,19 +1,20 @@
-from src.database.core import functions
+from src.database.core.functions import fetchone, transaction, select
+from src.database.text import all_columns, any_columns, users, uid_condition
 
 
 async def exists(uid: int) -> bool:
     """Check for Existence"""
-    return bool(await functions.fetchone("SELECT 1 FROM users WHERE uid = %s LIMIT 1;",
-                                         (uid,)))
+    return bool(await fetchone(select(any_columns, users, uid_condition),
+                               (uid,)))
 
 
 async def add(uid: int) -> None:
     """Add"""
-    await functions.transaction("INSERT INTO users(uid) VALUES (%s);",
-                                (uid,))
+    await transaction("INSERT INTO users(uid) VALUES (%s);",
+                      (uid,))
 
 
 async def info(uid: int) -> dict:
     """Information"""
-    return await functions.fetchone("SELECT * FROM users WHERE uid = %s LIMIT 1;",
-                                    (uid,))
+    return await fetchone(select(all_columns, users, uid_condition),
+                          (uid,))
